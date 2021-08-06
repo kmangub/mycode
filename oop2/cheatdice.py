@@ -30,4 +30,9 @@ class Cheat_Loaded_Dice(Player): # inheritance of Player
           if self.dice[i] < 6:
               self.dice[i] += 1
           i += 1
+class Cheat_No_Two_Or_Below(Player):
+    def cheat(self):
+        for i, dice in enumerate(self.dice):
+            if self.dice[i] < 3:
+                dice = 3
 
