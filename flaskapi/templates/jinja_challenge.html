@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body>
+   
+      {% for host in arr: %}
+      <p>{{ host["ip"] }} {{host["fqdn"] }} # {{ host["hostname"] }}</p>
+      {% endfor %}
+      <br>
+      <form action="/add" method="post">
+	 <p>hostname <input type = text name = hostname></p>
+	 <p>ip <input type = text name = ip></p>
+	 <p>fqdn <input type = text name = fqdn></p>
+     	 <p><input type = submit value="submit"></p>
+      </form>
+   </body>
+</html>
+
